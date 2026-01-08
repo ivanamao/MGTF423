@@ -1,4 +1,5 @@
 # PostgreSQL and Jupyter Setup
+by Bhaavya Naharas and Ivana Mao
 ## Step 1: Install PostgreSQL
 1. Download PostgreSQL
 - Go to [https://www.postgresql.org/download/](https://www.postgresql.org/download/), download the installation 
