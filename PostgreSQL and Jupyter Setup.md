@@ -20,13 +20,13 @@ psql --version
 ```bash
 psql -U postgres
 ```
-You'll be prompted to enter the password you set earlier, then press enter / return
+You'll be prompted to enter the password you set earlier, then press enter / return<br>
 2.	Create a database for the course
 ```bash
 CREATE DATABASE risk_analysis;
 ```
 Make sure to include ";" which marks the end of the SQL statement. SQL keywords like `CREATE` and `DATABASE` are 
-case-insensitive.
+case-insensitive.<br>
 3.	Connect to the database
 ```bash
 \c risk_analysis
@@ -50,7 +50,7 @@ It should return:
 ```bash
 python --version
 ```
-If it doesn't work, change the executable `python` to `python3` (the same for below commands)
+If it doesn't work, change the executable `python` to `python3` (the same for below commands)<br>
 2. Create a virtual environment
 ```bash
 python -m venv risk_env
