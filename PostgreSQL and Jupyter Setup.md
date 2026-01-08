@@ -4,11 +4,13 @@ by Bhaavya Naharas and Ivana Mao
 1. Download PostgreSQL
 - Go to [https://www.postgresql.org/download/](https://www.postgresql.org/download/), download the installation 
 package for your operating system 
+
 2. During installation
 - You'll be prompted to set a password for the default superuser "postgres", make sure to 
   remember that password (to make it easy to remember, I recommend set the password as "postgres" too)
 - Keep the default port number: 5432
 - Keep other settings as is when installing
+
 3. Verify installation
 - Open terminal (MacOS) or command prompt (Windows), run: 
 ```bash 
@@ -21,22 +23,25 @@ psql --version
 ```bash
 psql -U postgres
 ```
-You'll be prompted to enter the password you set earlier, then press enter / return<br>
+- You'll be prompted to enter the password you set earlier, then press enter / return<br>
+
 2.	Create a database for the course
 ```bash
 CREATE DATABASE risk_analysis;
 ```
-Make sure to include ";" which marks the end of the SQL statement. SQL keywords like `CREATE` and `DATABASE` are 
+- Make sure to include ";" which marks the end of the SQL statement. SQL keywords like `CREATE` and `DATABASE` are 
 case-insensitive.<br>
+
 3.	Connect to the database
 ```bash
 \c risk_analysis
 ```
+
 4.	Confirm connection
 ```bash
 SELECT current_database();
 ```
-It should return:
+- It should return:
 ```text
  current_database 
 ------------------
@@ -51,20 +56,24 @@ It should return:
 ```bash
 python --version
 ```
-If it doesn't work, change the executable `python` to `python3` (the same for below commands)<br>
+- If it doesn't work, change the executable `python` to `python3` (the same for below commands)<br>
+
 2. Create a virtual environment
 ```bash
 python -m venv risk_env
 ```
+
 3. Activate the environment
 - Mac/Linux:
 ```bash
 source risk_env/bin/activate
 ```
+
 - Windows:
 ```bash
 risk_env\Scripts\activate
 ```
+
 4. Install required packages
 ```bash
 pip install jupyter pandas sqlalchemy psycopg2-binary
@@ -76,7 +85,9 @@ pip install jupyter pandas sqlalchemy psycopg2-binary
 ```bash
 jupyter notebook
 ```
-2. create a new notebook, name it something like "risk_analysis_setup.ipynb"
+
+2. Create a new notebook, name it something like "risk_analysis_setup.ipynb"
+
 3. To confirm Python kernel is active, run the following in a cell `print("Jupyter is working")`
 
 ## Step 5: Connect Python to PostgreSQL
@@ -85,12 +96,14 @@ jupyter notebook
 import pandas as pd
 from sqlalchemy import create_engine
 ```
+
 2. Create a database engine (<password> is the password you set for superuser postgres)
 ```python
 engine = create_engine(
      "postgresql://postgres:<password>@localhost:5432/risk_analysis"
 )
 ```
+
 3. Test the connection
 ```python
 with engine.connect() as conn:
@@ -109,6 +122,7 @@ CREATE TABLE IF NOT EXISTS test_table (
 with engine.begin() as conn:
     conn.exec_driver_sql(query)
 ```
+
 2.	Insert sample data 
 ```python
 query = """
@@ -117,9 +131,11 @@ INSERT INTO test_table (value) VALUES (10), (20), (30);
 with engine.begin() as conn:
     conn.exec_driver_sql(query)
 ```
+
 3. Query the data
 ```python
 df = pd.read_sql("SELECT * FROM test_table;", engine)
 df
 ```
+
 4.	Confirm output appears correctly
