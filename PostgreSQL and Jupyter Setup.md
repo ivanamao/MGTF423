@@ -97,7 +97,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 ```
 
-2. Create a database engine (<password> is the password you set for superuser postgres)
+2. Create a database engine (`<password>` is the password you set for superuser postgres)
 ```python
 engine = create_engine(
      "postgresql://postgres:<password>@localhost:5432/risk_analysis"
