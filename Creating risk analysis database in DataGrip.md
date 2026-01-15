@@ -249,7 +249,7 @@ psql -U postgres
 ## now the disclosure_issue_log table is populated
 ```
 ## 6. Explore
-- Now all the tables are imported, let's try these queries from lecture notes
+- Now all the tables are populated, let's try these queries from lecture notes
 ```sql
 -- The Find All Query
 SELECT * FROM risk_disclosure;
