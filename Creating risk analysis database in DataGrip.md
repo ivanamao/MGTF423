@@ -196,7 +196,7 @@ Download the following csv files under Canvas Week 2 module, save them to a loca
 - In the import window, select "from: company.csv", tick "First row is header“ option, then press OK:
 ![importdata2.png](screenshots/importdata2.png)
 - Repeat these steps for the rest of the tables. They need to be done in the order as above from 1. to 8. because there are dependencies between the tables
-- When importing csv for table disclosure_note, you should see an error that prevent you from doing so:
+- When importing csv for table disclosure_note, you should see an error that prevents you from doing so:
 ![disclosurenote_err.png](screenshots/disclosurenote_err.png)
 - Clicking into the disclosure_note.txt file it created, it says that the check constraint note_id_format_chk is 
   violated:
