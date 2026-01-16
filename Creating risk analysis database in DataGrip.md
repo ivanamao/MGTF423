@@ -1,10 +1,9 @@
 # Creating risk analysis database using DataGrip
 by Ivana Mao
 ## 1. Install DataGrip and setting up the working directory
-- Please refer to the video under Canvas Week 2 module ["PostgreSQL and Datagrip Tutorial"](https://drive.google.
-  com/file/d/1fbGFU1rLUIYQvoJ52juleMtw5UwM_k3a/view?usp=sharing) starting from 3:12
+- Please refer to the video under Canvas Week 2 module ["PostgreSQL and Datagrip Tutorial"](https://drive.google.com/file/d/1fbGFU1rLUIYQvoJ52juleMtw5UwM_k3a/view?usp=sharing) starting from 3:12
 
-## 2. Find risk_analysis database created from Jupyter [last week](https://github.com/ivanamao/MGTF423/blob/5adb9be87b3ea054eaa40d19eaf771f647b2a5d8/PostgreSQL%20and%20Jupyter%20Setup.md)
+## 2. Find risk_analysis database created from Jupyter [last week](https://github.com/ivanamao/MGTF423/blob/main/PostgreSQL%20and%20Jupyter%20Setup.md)
 - In Database Explorer, right click on postgres@localhost, select Properties
 - Go to Schemas tab, press Refresh, risk_analysis database should appear, select risk_analysis and All schemas under it, unselect others
 ![find_db.png](screenshots/find_db.png)
